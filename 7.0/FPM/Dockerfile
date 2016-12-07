@@ -12,7 +12,7 @@ ENV PHP_MAX_FILE_UPLOAD 200
 ENV PHP_MAX_POST        100M
 
 # Let's roll
-RUN	echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
+RUN	echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
     apk update && \
 	apk upgrade && \
 	apk add --update tzdata && \
@@ -21,7 +21,6 @@ RUN	echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
 	apk add --update \
 		php7-mcrypt \
 		php7-soap \
-		php7-openssl \
 		php7-gmp \
 		php7-pdo_odbc \
 		php7-json \
